@@ -1,5 +1,5 @@
 ## parse_cvi_xml
-Forked from [baiwenjia/ukbb_cardiac](https://github.com/baiwenjia/ukbb_cardiac).
+This is a modified repository forked from [baiwenjia/ukbb_cardiac](https://github.com/baiwenjia/ukbb_cardiac).
 
 The [baiwenjia/ukbb_cardiac](https://github.com/baiwenjia/ukbb_cardiac) repository is licensed under the Apache-2.0 License. This requires the original copyright notice and license to be included, when the original repository is forked. Additionally, the Apache-2.0 License requires any changes made to the original code to be stated. In accordance with the Apache-2.0 License requirements, these changes are listed below.
 
