@@ -16,6 +16,13 @@
 # Changes made to ths file by Author: github.com/TinySpins in accordance with
 # the Apache-2.0 License are as follows:
 #
+# 10-01-2023:
+# - Changed 'import pickle' to 'import scipy.io' to output contours in .mat format (Matlab)
+# - Changed: with open(os.path.join(output_dir, '{0}.pickle'.format(uid)), 'wb') as f:
+#            pickle.dump(contours, f)
+#        to: scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours})
+# - Changed description of the file from 'save them in a pickle file' to 'save them in a .mat file'
+#
 # 28-02-2022:
 # - Changed Copyright section to include changes made to this file
 #
@@ -25,11 +32,11 @@
     Parser for cvi42 exported xml files.
 
     This parser searches for dicom UIDs in the xml file, extract the contour
-    point coordinates and save them in a pickle file for each image slice.
+    point coordinates and save them in a .mat file for each image slice.
     """
 import os
 import sys
-import pickle
+import scipy.io
 import numpy as np
 from xml.dom import minidom
 
@@ -94,8 +101,7 @@ def parseFile(xml_name, output_dir):
 
     # Save the contours for each dicom file
     for uid, contours in uid_contours.items():
-        with open(os.path.join(output_dir, '{0}.pickle'.format(uid)), 'wb') as f:
-            pickle.dump(contours, f)
+        scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours})
 
 
 if __name__ == '__main__':
