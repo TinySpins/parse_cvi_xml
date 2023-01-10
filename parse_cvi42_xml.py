@@ -22,6 +22,7 @@
 #            pickle.dump(contours, f)
 #        to: scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours})
 # - Changed description of the file from 'save them in a pickle file' to 'save them in a .mat file'
+# - Added functionality such that the script produces a 'status_done.txt' file when finished.
 #
 # 28-02-2022:
 # - Changed Copyright section to include changes made to this file
@@ -36,6 +37,7 @@
     """
 import os
 import sys
+import time
 import scipy.io
 import numpy as np
 from xml.dom import minidom
@@ -102,6 +104,11 @@ def parseFile(xml_name, output_dir):
     # Save the contours for each dicom file
     for uid, contours in uid_contours.items():
         scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours})
+
+    # Signal the code has finished
+    time.sleep(2)
+    status = open(os.path.join(output_dir, "status_done.txt"),"w+")
+    status.close()
 
 
 if __name__ == '__main__':
