@@ -17,15 +17,15 @@
 # the Apache-2.0 License are as follows:
 #
 # 10-01-2023:
-# - Changed 'import pickle' to 'import scipy.io' to output contours in .mat format (Matlab)
+# - Changed 'import pickle' to 'import scipy.io' to output contours in .mat format (Matlab).
 # - Changed: with open(os.path.join(output_dir, '{0}.pickle'.format(uid)), 'wb') as f:
 #            pickle.dump(contours, f)
 #        to: scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours})
-# - Changed description of the file from 'save them in a pickle file' to 'save them in a .mat file'
+# - Changed description of the file from 'save them in a pickle file' to 'save them in a .mat file'.
 # - Added functionality such that the script produces a 'status_done.txt' file when finished.
 #
 # 28-02-2022:
-# - Changed Copyright section to include changes made to this file
+# - Changed Copyright section to include changes made to this file.
 #
 #
 # ==============================================================================

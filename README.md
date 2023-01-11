@@ -5,7 +5,7 @@ The [baiwenjia/ukbb_cardiac](https://github.com/baiwenjia/ukbb_cardiac) reposito
 
 
 ### Changes
-Only changes made to the forked version of the original repository are stated here. I.e. changes made in the original repository made after 28-02-2022 are not reflected in this list.
+Only changes made to the forked version of the original repository are stated here. I.e. changes made in the original repository made after 28-02-2022 are not reflected in this list. Changes to scripts are declared in their respective headers.
 
 #### 28-02-2022
 * Renamed: Repository name: ukbb_cardiac -> Repository name: parse_cvi_xml
