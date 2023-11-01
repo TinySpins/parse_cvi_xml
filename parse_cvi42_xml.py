@@ -103,7 +103,7 @@ def parseFile(xml_name, output_dir):
 
     # Save the contours for each dicom file
     for uid, contours in uid_contours.items():
-        scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours})
+        scipy.io.savemat(os.path.join(output_dir, '{0}.mat'.format(uid)), {'contours': contours}, long_field_names=True)
 
     # Signal the code has finished
     time.sleep(2)
