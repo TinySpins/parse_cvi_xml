@@ -7,6 +7,16 @@ The [baiwenjia/ukbb_cardiac](https://github.com/baiwenjia/ukbb_cardiac) reposito
 ### Changes
 Only changes made to the forked version of the original repository are stated here. I.e. changes made in the original repository made after 28-02-2022 are not reflected in this list. Changes to scripts are declared in their respective headers.
 
+#### 21-04-2023
+* Deleted: /utils
+* Deleted: /utils/biobank_utils.py
+* Deleted: /utils/convert_data_ukbb2964.py
+* Deleted: /utils/download_data_ukbb_general.py
+* Deleted: /utils/prepare_data_ukbb2964.py
+* Deleted: /utils/propagate_aortic_annotation.py
+* Deleted: /utils/ukb_field_categories.py
+* Edited:  /README.md
+
 #### 28-02-2022
 * Renamed: Repository name: ukbb_cardiac -> Repository name: parse_cvi_xml
 * Deleted: /aortic
